@@ -25,28 +25,30 @@
 		<header>
 			<h1>My Todo List</h1>
 		</header>
-		<form>
-			<input type="text" data-check="ok" />
-			<input type="number" min="1" max="12" placeholder="M" data-check="ok" />
-			<input type="number" min="1" max="31" placeholder="D" data-check="ok" />
-			<button type="submit" class="formBtn">
-				<i class="fa fa-solid fa-plus"></i>Add
-			</button>
-			<p class="alert-container"></p>
-		</form>
+		<main>
+			<form>
+				<input type="text" data-check="ok" />
+				<input type="number" min="1" max="12" placeholder="M" data-check="ok" />
+				<input type="number" min="1" max="31" placeholder="D" data-check="ok" />
+				<button type="submit" class="formBtn">
+					<i class="fa fa-solid fa-plus"></i>Add
+				</button>
+				<p class="alert-container"></p>
+			</form>
 
-		<div class="control">
-			<div class="sort">
-				<button>Sort By time</button>
+			<div class="control">
+				<div class="sort">
+					<button>Sort By time</button>
+				</div>
+				<div class="select">
+					<select name="todos" class="filter-todo" title="filter-lists">
+						<option value="all">All</option>
+						<option value="completed">Completed</option>
+						<option value="uncompleted">Uncompleted</option>
+					</select>
+				</div>
 			</div>
-			<div class="select">
-				<select name="todos" class="filter-todo" title="filter-lists">
-					<option value="all">All</option>
-					<option value="completed">Completed</option>
-					<option value="uncompleted">Uncompleted</option>
-				</select>
-			</div>
-		</div>
+		</main>
 
 		<ul class="todo-container"></ul>
 	</body>

@@ -10,6 +10,7 @@ button {
 
 body {
 	background-image: linear-gradient(81deg, #a6c0fe, #f68084);
+	background-repeat: no-repeat;
 	color: #fff;
 	min-height: 100vh;
 	font-family: "Poppins", sans-serif;
@@ -27,6 +28,7 @@ form {
 	align-items: center;
 	gap: 0.4rem;
 }
+
 form {
 	width: max-content;
 	margin: 0 auto;
@@ -238,4 +240,41 @@ select {
 .completed {
 	text-decoration: line-through;
 	opacity: 0.5;
+}
+
+@media (max-width: 800px) {
+	main {
+		max-width: calc(100% - 1rem);
+	}
+	form {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+	form > :nth-child(1) {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
+	form > :nth-child(4) {
+		grid-column: 3 / -1;
+		grid-row: 2 / 3;
+	}
+	.control {
+		padding-top: 2rem;
+		display: grid;
+		place-items: center;
+		gap: 1rem;
+	}
+	.todo {
+		width: 85%;
+		justify-content: center;
+	}
+	.todo p.todo-text {
+		width: 100%;
+	}
+	.todo p.todo-time {
+		width: 0;
+		font-size: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
 }
